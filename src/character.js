@@ -7,9 +7,9 @@ export default class Character extends Component {
       <button
         id="character"
         className="character"
-        onClick={e => this.props.onClick(e)}
+        onClick={this.props.onClick}
       >
-        {'I am a character'}
+        <span>{'I am a character'}</span>
       </button>
     );
   }

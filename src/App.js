@@ -9,20 +9,34 @@ class App extends Component {
 
     this.state = {
       coins: 0,
+      showGame: false,
     }
     this.handleCoinClick = this.handleCoinClick.bind(this);
+    this.handleToggleGame = this.handleToggleGame.bind(this);
   }
 
   handleCoinClick(e) {
-    let incrementedCoin = this.state.coins + 1;
+    const incrementedCoin = this.state.coins + 1;
     this.setState({coins: incrementedCoin});
+  }
+
+  handleToggleGame(e) {
+    const showGame = !this.state.showGame;
+    this.setState({showGame});
   }
 
   render() {
     return (
-      <div id="game" className="game">
-        <Counter coins={this.state.coins} />
-        <Character onClick={e => this.handleCoinClick(e)} />
+      <div>
+        {this.state.showGame &&
+          <div id="game" className="game">
+            <Counter coins={this.state.coins} />
+            <Character onClick={this.handleCoinClick} />
+          </div>
+        }
+        <button onClick={this.handleToggleGame}>
+          {this.state.showGame ? 'Hide' : 'Show'}
+        </button>
       </div>
     );
   }
