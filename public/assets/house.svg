@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="28px" viewBox="0 0 29 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3" transform="translate(-1.000000, 1.000000)">
+            <g id="Group-2" transform="translate(11.000000, 0.000000)" fill="#895A5A" stroke="#738B8A" stroke-width="0.25">
+                <rect id="Rectangle-8" x="0" y="0" width="2" height="3"></rect>
+            </g>
+            <path d="M10.7224059,2.25 L6.38882425,11.75 L28.6139588,11.75 L24.355272,2.25 L10.7224059,2.25 Z" id="Rectangle-3" stroke="#738B8A" stroke-width="0.5" fill="#A7CFC0"></path>
+            <rect id="Rectangle-4" stroke="#738B8A" stroke-width="0.5" fill="#A5D5F2" x="5.25" y="11.25" width="24.5" height="14.5"></rect>
+            <rect id="Rectangle-13" stroke="#738B8A" fill="#D8D8D8" x="5.5" y="11.5" width="24" height="1"></rect>
+            <rect id="Rectangle-11" stroke="#738B8A" stroke-width="0.5" fill="#F6B6B6" x="15.25" y="18.25" width="4.5" height="7.5"></rect>
+            <rect id="Rectangle-5" stroke="#738B8A" fill="#A7CFC0" x="5.5" y="26.5" width="24" height="1"></rect>
+            <g id="Group" transform="translate(0.000000, 20.000000)">
+                <path d="M1.43145079,4.125 C1.22691693,4.832776 1.125,5.35159434 1.125,5.67604781 C1.125,5.99316204 1.22311066,6.39353141 1.42093819,6.875 L3.6049752,6.875 C3.78529002,6.27986441 3.875,5.82035713 3.875,5.5 C3.875,5.17964287 3.78529002,4.72013559 3.6049752,4.125 L1.43145079,4.125 Z" id="Rectangle-6" stroke="#738B8A" stroke-width="0.25" fill="#738B8A"></path>
+                <rect id="Rectangle-7" fill="#90D1B8" x="2" y="1" width="1" height="3"></rect>
+                <rect id="Rectangle-7" fill="#90D1B8" x="3" y="2" width="1" height="2"></rect>
+                <path d="M1.78458708,0.936687754 C2.06418519,0.936687754 2.28022242,1.12790907 2.28022242,0.895630527 C2.28022242,0.810801136 2.27809615,0.700610142 2.19409903,0.620284166 C2.13764161,0.566294247 2.04520812,0.496528375 1.97110194,0.456079712 C1.85356478,0.391925544 1.69385621,0.390852286 1.58500109,0.390852286 C1.30540298,0.390852286 1.07874393,0.579151249 1.07874393,0.811429792 C1.07874393,1.04370833 1.50498897,0.936687754 1.78458708,0.936687754 Z" id="Oval" fill="#90D1B8" transform="translate(1.679483, 0.890852) rotate(40.000000) translate(-1.679483, -0.890852) "></path>
+                <path d="M2.604038,1.84474948 C2.86582165,1.84474948 3.13003676,1.50968779 3.13003676,1.31240008 C3.13003676,1.11511237 2.86582165,1.13030748 2.604038,1.13030748 C2.34225434,1.13030748 2.13003676,1.29024077 2.13003676,1.48752848 C2.13003676,1.68481619 2.34225434,1.84474948 2.604038,1.84474948 Z" id="Oval" fill="#90D1B8" transform="translate(2.630037, 1.630037) rotate(72.000000) translate(-2.630037, -1.630037) "></path>
+                <path d="M3.59109414,2.14333932 C3.87069225,2.14333932 4.03542798,1.39253788 4.03542798,1.16025934 C4.03542798,0.927980793 3.71597398,1.26588839 3.43637587,1.26588839 C3.15677776,1.26588839 3.08483698,1.49048327 3.08483698,1.72276181 C3.08483698,1.95504036 3.31149603,2.14333932 3.59109414,2.14333932 Z" id="Oval" fill="#90D1B8" transform="translate(3.584837, 1.611038) rotate(190.000000) translate(-3.584837, -1.611038) "></path>
+                <path d="M1.59153858,3.07889954 C1.89186012,3.07889954 1.94770756,2.32077405 1.94770756,2.21169358 C1.94770756,2.10261312 1.77629604,2.18470497 1.4759745,2.18470497 C1.17565297,2.18470497 1.04775835,2.77231143 1.04775835,2.88139189 C1.04775835,2.99047236 1.29121705,3.07889954 1.59153858,3.07889954 Z" id="Oval" fill="#90D1B8" transform="translate(1.547758, 2.655071) rotate(50.000000) translate(-1.547758, -2.655071) "></path>
+            </g>
+            <rect id="Rectangle-12" stroke="#738B8A" stroke-width="0.5" fill="#F9F6B3" x="8.25" y="17.25" width="3.5" height="4.5"></rect>
+            <path d="M8.5,19.5 L11.5,19.5" id="Line" stroke="#738B8A" stroke-width="0.5" stroke-linecap="square"></path>
+            <rect id="Rectangle-12" stroke="#738B8A" stroke-width="0.5" fill="#F9F6B3" x="23.25" y="17.25" width="3.5" height="4.5"></rect>
+            <path d="M23.5,19.5 L26.5,19.5" id="Line" stroke="#738B8A" stroke-width="0.5" stroke-linecap="square"></path>
+            <rect id="Rectangle-10" fill="#947575" x="16" y="19" width="3" height="3"></rect>
+            <rect id="Rectangle-10" fill="#947575" x="16" y="23" width="3" height="2"></rect>
+            <circle id="Oval-2" fill="#947575" cx="15.825" cy="22.375" r="1"></circle>
+            <path d="M11.5,5.25 L15.5,5.25" id="Line-2" stroke="#738B8A" stroke-width="0.25" stroke-linecap="square"></path>
+            <path d="M16.5,5.25 L18.5,5.25" id="Line-2" stroke="#738B8A" stroke-width="0.25" stroke-linecap="square"></path>
+            <path d="M9.5,8.25 L13.5,8.25" id="Line-2" stroke="#738B8A" stroke-width="0.25" stroke-linecap="square"></path>
+            <path d="M16.5,9.25 L25.5,9.25" id="Line-2" stroke="#738B8A" stroke-width="0.25" stroke-linecap="square"></path>
+            <path d="M22.5,7.20833333 L26.5,7.20833333" id="Line-2" stroke="#738B8A" stroke-width="0.25" stroke-linecap="square"></path>
+        </g>
+    </g>
+</svg>

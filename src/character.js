@@ -9,7 +9,9 @@ export default class Character extends Component {
         className="character"
         onClick={this.props.onClick}
       >
-        <span>{'I am a character'}</span>
+        <object type="image/svg+xml" data="/assets/house.svg">
+          {'Character'}
+        </object>
       </button>
     );
   }
