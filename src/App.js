@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './css/app.css';
 import Character from './character.js';
 import Counter from './counter.js';
 
