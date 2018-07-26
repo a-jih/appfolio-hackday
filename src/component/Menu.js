@@ -19,9 +19,24 @@ class Menu extends Component {
         price: 3
       }
     ];
+
+    this.state = {
+      coins: this.props.coins,
+      dogHousePurchaseDisabled: this.props.coins < this.houseList[0].price,
+      housePurchaseDisabled: this.props.coins < this.houseList[1].price,
+      apartmentPurchaseDisabled: this.props.coins < this.houseList[2].price,
+    }
   }
 
   renderHousingOptions(){
+    if (this.state.coins != this.props.coins){
+      this.setState({
+        coins: this.props.coins,
+        dogHousePurchaseDisabled: this.props.coins < this.houseList[0].price,
+        housePurchaseDisabled: this.props.coins < this.houseList[1].price,
+        apartmentPurchaseDisabled: this.props.coins < this.houseList[2].price,
+      });
+    }
     return (
       <div>
         <Card>
@@ -30,18 +45,21 @@ class Menu extends Component {
               <ul className="OptionList">
                 <li>{this.houseList[0].type}
                   <button
+                    disabled={this.state.dogHousePurchaseDisabled}
                   >
                     {this.houseList[0].price} coins
                   </button>
                 </li>
                 <li>{this.houseList[1].type}
                   <button
+                    disabled={this.state.housePurchaseDisabled}
                   >
                     {this.houseList[1].price} coins
                   </button>
                 </li>
                 <li>{this.houseList[2].type}
                   <button
+                    disabled={this.state.apartmentPurchaseDisabled}
                   >
                     {this.houseList[2].price} coins
                   </button>

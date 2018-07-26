@@ -25,6 +25,7 @@ class App extends Component {
         <Counter coins={this.state.coins} />
         <Character onClick={e => this.handleCoinClick(e)} />
         <Menu
+          coins={this.state.coins}
         />
       </div>
     );
