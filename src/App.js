@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './css/app.css';
 import Character from './character.js';
 import Counter from './counter.js';
+import Menu from './component/Menu'
 
 class App extends Component {
   constructor(props) {
@@ -23,6 +24,8 @@ class App extends Component {
       <div id="game" className="game">
         <Counter coins={this.state.coins} />
         <Character onClick={e => this.handleCoinClick(e)} />
+        <Menu
+        />
       </div>
     );
   }
