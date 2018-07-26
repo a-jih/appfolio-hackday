@@ -5,81 +5,52 @@ import '../css/Menu.css'
 class Menu extends Component {
   constructor(props){
     super(props)
-    this.houseList = [
-      {
-        type: 'Dog House',
-        price: 1
-      },
-      {
-        type: 'House',
-        price: 2
-      },
-      {
-        type: 'Apartment',
-        price: 3
-      }
-    ];
-
-    this.state = {
-      coins: this.props.coins,
-      dogHousePurchaseDisabled: this.props.coins < this.houseList[0].price,
-      housePurchaseDisabled: this.props.coins < this.houseList[1].price,
-      apartmentPurchaseDisabled: this.props.coins < this.houseList[2].price,
-    }
   }
 
   handleCreateDogHouseClick(e){
-    this.props.subtractCoinCount(this.houseList[0].price);
+    this.props.subtractCoinCount(this.props.houseList[0].price);
     this.props.createDogHouse();
   }
 
   handleCreateHouseClick(e){
-    this.props.subtractCoinCount(this.houseList[1].price);
+    this.props.subtractCoinCount(this.props.houseList[1].price);
     this.props.createHouse();
   }
 
   handleCreateApartmentClick(e){
-    this.props.subtractCoinCount(this.houseList[2].price);
+    this.props.subtractCoinCount(this.props.houseList[2].price);
     this.props.createApartment();
   }
 
   renderHousingOptions(){
-    if (this.state.coins != this.props.coins){
-      this.setState({
-        coins: this.props.coins,
-        dogHousePurchaseDisabled: this.props.coins < this.houseList[0].price,
-        housePurchaseDisabled: this.props.coins < this.houseList[1].price,
-        apartmentPurchaseDisabled: this.props.coins < this.houseList[2].price,
-      });
-    }
     return (
       <div>
         <Card>
           <CardBody>
             <CardTitle>Purchase Options</CardTitle>
               <ul className="OptionList">
-                <li>{this.houseList[0].type}
+                <li>{this.props.houseList[0].type}
                   <button
-                    disabled={this.state.dogHousePurchaseDisabled}
+                    disabled={this.props.dogHousePurchaseDisabled}
                     onClick={e => this.handleCreateDogHouseClick(e)}
                   >
-                    {this.houseList[0].price} coins
+                    {this.props.houseList[0].price} coins
                   </button>
                 </li>
-                <li>{this.houseList[1].type}
+                <li>{this.props.houseList[1].type}
                   <button
-                    disabled={this.state.housePurchaseDisabled}
+                    disabled={this.props.housePurchaseDisabled}
                     onClick={e => this.handleCreateHouseClick(e)}
                   >
-                    {this.houseList[1].price} coins
+                    {this.props.houseList[1].price} coins
                   </button>
                 </li>
-                <li>{this.houseList[2].type}
+                <li>{this.props.houseList[2].type}
                   <button
-                    disabled={this.state.apartmentPurchaseDisabled}
+                    disabled={this.props.apartmentPurchaseDisabled}
                     onClick={e => this.handleCreateApartmentClick(e)}
                   >
-                    {this.houseList[2].price} coins
+                    {this.props.houseList[2].price} coins
                   </button>
                 </li>
               </ul>
