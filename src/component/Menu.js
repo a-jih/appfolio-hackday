@@ -30,14 +30,17 @@ class Menu extends Component {
 
   handleCreateDogHouseClick(e){
     this.props.subtractCoinCount(this.houseList[0].price);
+    this.props.createDogHouse();
   }
 
   handleCreateHouseClick(e){
     this.props.subtractCoinCount(this.houseList[1].price);
+    this.props.createHouse();
   }
 
   handleCreateApartmentClick(e){
     this.props.subtractCoinCount(this.houseList[2].price);
+    this.props.createApartment();
   }
 
   renderHousingOptions(){

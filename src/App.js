@@ -13,6 +13,9 @@ class App extends Component {
     }
     this.handleCoinClick = this.handleCoinClick.bind(this);
     this.subtractCoinCount = this.subtractCoinCount.bind(this);
+    this.createDogHouse = this.createDogHouse.bind(this);
+    this.createHouse = this.createHouse.bind(this);
+    this.createApartment = this.createApartment.bind(this);
   }
 
   handleCoinClick(e) {
@@ -25,6 +28,19 @@ class App extends Component {
     this.setState({coins: decrementedCoin});
   }
 
+  // put logic in following three methods to create house on bottom of page
+  createDogHouse(e){
+
+  }
+
+  createHouse(e){
+
+  }
+
+  createApartment(e){
+
+  }
+
   render() {
     return (
       <div id="game" className="game">
@@ -32,6 +48,9 @@ class App extends Component {
         <Character onClick={e => this.handleCoinClick(e)} />
         <Menu
           coins={this.state.coins}
+          createDogHouse={e => this.createDogHouse(e)}
+          createHouse={e => this.createHouse(e)}
+          createApartment={e => this.createApartment(e)}
           subtractCoinCount={this.subtractCoinCount}
         />
       </div>
