@@ -12,11 +12,17 @@ class App extends Component {
       coins: 0,
     }
     this.handleCoinClick = this.handleCoinClick.bind(this);
+    this.subtractCoinCount = this.subtractCoinCount.bind(this);
   }
 
   handleCoinClick(e) {
     let incrementedCoin = this.state.coins + 1;
     this.setState({coins: incrementedCoin});
+  }
+
+  subtractCoinCount(amount){
+    let decrementedCoin = this.state.coins - amount;
+    this.setState({coins: decrementedCoin});
   }
 
   render() {
@@ -26,6 +32,7 @@ class App extends Component {
         <Character onClick={e => this.handleCoinClick(e)} />
         <Menu
           coins={this.state.coins}
+          subtractCoinCount={this.subtractCoinCount}
         />
       </div>
     );

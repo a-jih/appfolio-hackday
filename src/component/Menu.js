@@ -28,6 +28,18 @@ class Menu extends Component {
     }
   }
 
+  handleCreateDogHouseClick(e){
+    this.props.subtractCoinCount(this.houseList[0].price);
+  }
+
+  handleCreateHouseClick(e){
+    this.props.subtractCoinCount(this.houseList[1].price);
+  }
+
+  handleCreateApartmentClick(e){
+    this.props.subtractCoinCount(this.houseList[2].price);
+  }
+
   renderHousingOptions(){
     if (this.state.coins != this.props.coins){
       this.setState({
@@ -46,6 +58,7 @@ class Menu extends Component {
                 <li>{this.houseList[0].type}
                   <button
                     disabled={this.state.dogHousePurchaseDisabled}
+                    onClick={e => this.handleCreateDogHouseClick(e)}
                   >
                     {this.houseList[0].price} coins
                   </button>
@@ -53,6 +66,7 @@ class Menu extends Component {
                 <li>{this.houseList[1].type}
                   <button
                     disabled={this.state.housePurchaseDisabled}
+                    onClick={e => this.handleCreateHouseClick(e)}
                   >
                     {this.houseList[1].price} coins
                   </button>
@@ -60,6 +74,7 @@ class Menu extends Component {
                 <li>{this.houseList[2].type}
                   <button
                     disabled={this.state.apartmentPurchaseDisabled}
+                    onClick={e => this.handleCreateApartmentClick(e)}
                   >
                     {this.houseList[2].price} coins
                   </button>
