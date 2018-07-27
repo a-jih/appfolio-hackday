@@ -11,15 +11,15 @@ class App extends Component {
     this.houseList = [
       {
         type: 'Dog House',
-        price: 1
+        price: 5
       },
       {
         type: 'House',
-        price: 2
+        price: 10
       },
       {
         type: 'Apartment',
-        price: 3
+        price: 20
       }
     ];
 
@@ -81,18 +81,20 @@ class App extends Component {
       <div>
         {this.state.showGame &&
           <div id="game" className="game">
-            <Menu
-              houseList = {this.houseList}
-              dogHousePurchaseDisabled = {this.state.dogHousePurchaseDisabled}
-              housePurchaseDisabled = {this.state.housePurchaseDisabled}
-              apartmentPurchaseDisabled = {this.state.apartmentPurchaseDisabled}
-              createDogHouse={e => this.createDogHouse(e)}
-              createHouse={e => this.createHouse(e)}
-              createApartment={e => this.createApartment(e)}
-              subtractCoinCount={this.subtractCoinCount}
-            />
-            <Counter coins={this.state.coins} />
-            <Character onClick={this.handleCoinClick} />
+            <div id="controls">
+              <Menu
+                houseList = {this.houseList}
+                dogHousePurchaseDisabled = {this.state.dogHousePurchaseDisabled}
+                housePurchaseDisabled = {this.state.housePurchaseDisabled}
+                apartmentPurchaseDisabled = {this.state.apartmentPurchaseDisabled}
+                createDogHouse={e => this.createDogHouse(e)}
+                createHouse={e => this.createHouse(e)}
+                createApartment={e => this.createApartment(e)}
+                subtractCoinCount={this.subtractCoinCount}
+              />
+              <Counter coins={this.state.coins} />
+              <Character onClick={this.handleCoinClick} />
+            </div>
           </div>
         }
         <button onClick={this.handleToggleGame}>

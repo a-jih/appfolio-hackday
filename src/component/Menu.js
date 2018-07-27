@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import {Card, CardBody, CardTitle, CardImg} from 'reactstrap';
+import {Card, CardBody, CardTitle} from 'reactstrap';
 import '../css/Menu.css'
 
 class Menu extends Component {
-  constructor(props){
-    super(props)
-  }
-
   handleCreateDogHouseClick(e){
     this.props.subtractCoinCount(this.props.houseList[0].price);
     this.props.createDogHouse();
