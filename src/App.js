@@ -16,15 +16,15 @@ export default class App extends Component {
     this.houseList = [
       {
         type: 'Dog House',
-        price: 5
-      },
-      {
-        type: 'House',
         price: 10
       },
       {
+        type: 'House',
+        price: 30
+      },
+      {
         type: 'Apartment',
-        price: 20
+        price: 100
       }
     ];
 
