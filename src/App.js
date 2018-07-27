@@ -78,7 +78,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div id="app" className="app">
         {this.state.showGame &&
           <div id="game" className="game">
             <div id="controls">
@@ -97,7 +97,7 @@ class App extends Component {
             </div>
           </div>
         }
-        <button onClick={this.handleToggleGame}>
+        <button className="btn" onClick={this.handleToggleGame}>
           {this.state.showGame ? 'Hide' : 'Show'}
         </button>
       </div>
