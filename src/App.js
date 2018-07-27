@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './css/app.css';
 import {Popover, PopoverHeader, PopoverBody, Button} from 'reactstrap';
-import Character from './character.js';
-import Counter from './counter.js';
+import Character from './character';
+import Counter from './counter';
 import Menu from './component/Menu'
 
 import Property from './component/Property';
@@ -74,7 +74,6 @@ export default class App extends Component {
   // put logic in following three methods to create house on bottom of page
   createDogHouse() {
     this.state.unitList.append(new UnitStore('Dog House'));
-    // console.log(this.state.unitList.state.unitList.length);
   }
 
   createHouse() {
@@ -101,7 +100,7 @@ export default class App extends Component {
       <div id="app" className="app">
         {this.state.showGame &&
           <div id="game" className="game">
-            <div id="controls">
+            <div id="controls" className="controls">
               <Popover id="popover" placement="top" isOpen={this.state.showMenu} target="MenuPopup" toggle={this.handleToggleMenu}>
                 <PopoverHeader>Purchase Options</PopoverHeader>
                 <PopoverBody>

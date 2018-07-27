@@ -1,5 +1,6 @@
 .game {
   display: flex;
+  height: inherit;
 }
 
 .app {
@@ -7,6 +8,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  height: 20rem;
 }
 
 .app>.btn {
@@ -15,9 +17,15 @@
   right: 0;
   margin: 1rem;
 }
+
 .popover {
   -webkit-animation: fadeIn 0.5s;
   animation: fadeIn 0.5s;
+}
+
+.controls {
+  margin-right: 3rem;
+  height: inherit;
 }
 
 /* Add animation (fade in the popup) */
