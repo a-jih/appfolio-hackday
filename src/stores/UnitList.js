@@ -1,5 +1,3 @@
-import UnitStore from './UnitStore';
-
 export default class UnitList {
   unitList = [];
   constructor() {

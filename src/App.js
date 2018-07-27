@@ -73,16 +73,18 @@ export default class App extends Component {
 
   // put logic in following three methods to create house on bottom of page
   createDogHouse() {
-    this.state.unitList.append(new UnitStore('Dog House'));
-    // console.log(this.state.unitList.state.unitList.length);
+    let position = Math.floor(Math.random() * 60 + 10);
+    this.state.unitList.append(new UnitStore('Dog House', position));
   }
 
   createHouse() {
-    this.state.unitList.append(new UnitStore('House'));
+    let position = Math.floor(Math.random() * 60 + 10);
+    this.state.unitList.append(new UnitStore('House', position));
   }
 
   createApartment() {
-    this.state.unitList.append(new UnitStore('Apartment'));
+    let position = Math.floor(Math.random() * 60 + 10);
+    this.state.unitList.append(new UnitStore('Apartment', position));
   }
 
   handleToggleGame = () => {
@@ -101,7 +103,7 @@ export default class App extends Component {
       <div id="app" className="app">
         {this.state.showGame &&
           <div id="game" className="game">
-            <div id="controls">
+            <div id="controls" className="controls">
               <Popover id="popover" placement="top" isOpen={this.state.showMenu} target="MenuPopup" toggle={this.handleToggleMenu}>
                 <PopoverHeader>Purchase Options</PopoverHeader>
                 <PopoverBody>
@@ -122,8 +124,8 @@ export default class App extends Component {
               </Button>
               <Counter coins={this.state.coins} />
               <Character onClick={this.handleCoinClick} />
-              <Property unitList={this.state.unitList} addCoin={this.addCoinCount}/>
             </div>
+            <Property unitList={this.state.unitList} addCoin={this.addCoinCount}/>
           </div>
         }
         <button className="btn" onClick={this.handleToggleGame}>

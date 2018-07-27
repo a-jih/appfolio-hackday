@@ -26,7 +26,15 @@ export default class House extends Component {
   render () {
     return (
       <div id={this.props.id}>
-        <img onClick={this.handleClick} src={this.props.store.photoUrl} alt='wrong url' />
+        <img
+          className="house"
+          onClick={this.handleClick}
+          src={this.props.store.photoUrl}
+          style={{right: `${this.props.store.position}%`}}
+          alt='wrong url'
+          width={this.props.store.width}
+          height={this.props.store.height}
+        />
       </div>
     );
   }
