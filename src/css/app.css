@@ -9,11 +9,7 @@
   right: 0;
 }
 
-.btn {
-
-}
-
-.app .btn {
+.app>.btn {
   position: absolute;
   bottom: 0;
   right: 0;
