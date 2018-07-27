@@ -1,10 +1,17 @@
+
 export default class UnitStore {
-  houseType = '';
   price = 0;
   houseStatus = true;
-  photoUrl = '';
+  photoUrl = '/assets/doghouse.svg';
 
-  // constructor() {
-  //   this.houseStatus = true;
-  // }
+  constructor(type) {
+    if (type == 'Dog House') {
+      this.price = 1;
+    } else if (type == 'House') {
+      this.price = 2;
+      this.photoUrl = '/assets/house.svg';
+    } else if (type == 'Apartment') {
+      this.price = 3;
+    }
+  }
 }
