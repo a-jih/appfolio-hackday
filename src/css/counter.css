@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 .coin-counter {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #000;
+  /*border: 1px solid #000;*/
   width: 5rem;
   height: 3rem;
+}
+
+.coin-font {
+  font-family: 'Roboto', sans-serif;
 }
