@@ -112,9 +112,9 @@ export default class App extends Component {
                   dogHousePurchaseDisabled = {this.state.dogHousePurchaseDisabled}
                   housePurchaseDisabled = {this.state.housePurchaseDisabled}
                   apartmentPurchaseDisabled = {this.state.apartmentPurchaseDisabled}
-                  createDogHouse={e => this.createDogHouse(e)}
-                  createHouse={e => this.createHouse(e)}
-                  createApartment={e => this.createApartment(e)}
+                  createDogHouse={this.createDogHouse}
+                  createHouse={this.createHouse}
+                  createApartment={this.createApartment}
                   subtractCoinCount={this.subtractCoinCount}
                 />
                 </PopoverBody>
@@ -124,6 +124,7 @@ export default class App extends Component {
               </Button>
               <Counter coins={this.state.coins} />
               <Character onClick={this.handleCoinClick} />
+              <Property unitList={this.state.unitList} addCoin={this.addCoinCount}/>
             </div>
             <Property unitList={this.state.unitList} addCoin={this.addCoinCount}/>
           </div>

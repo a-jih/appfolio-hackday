@@ -33,7 +33,7 @@ class Menu extends Component {
                     <Button
                       color="success"
                       disabled={this.props.dogHousePurchaseDisabled}
-                      onClick={e => this.handleCreateDogHouseClick(e)}
+                      onClick={this.handleCreateDogHouseClick}
                     >
                       {this.props.houseList[0].price} coins
                     </Button>
@@ -54,7 +54,7 @@ class Menu extends Component {
                     <Button
                       color="success"
                       disabled={this.props.housePurchaseDisabled}
-                      onClick={e => this.handleCreateHouseClick(e)}
+                      onClick={this.handleCreateHouseClick}
                     >
                       {this.props.houseList[1].price} coins
                     </Button>
@@ -75,7 +75,7 @@ class Menu extends Component {
                     <Button
                       color="success"
                       disabled={this.props.apartmentPurchaseDisabled}
-                      onClick={e => this.handleCreateApartmentClick(e)}
+                      onClick={this.handleCreateApartmentClick}
                     >
                       {this.props.houseList[2].price} coins
                     </Button>

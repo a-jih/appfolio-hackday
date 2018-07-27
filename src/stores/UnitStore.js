@@ -12,11 +12,11 @@ export default class UnitStore {
       this.price = 1;
       this.width = this.height = 30;
     } else if (type === 'House') {
-      this.price = 2;
+      this.price = 5;
       this.photoUrl = '/assets/house.svg';
       this.width = this.height = 50;
     } else if (type === 'Apartment') {
-      this.price = 3;
+      this.price = 10;
       this.photoUrl = '/assets/apartment.svg';
       this.width = this.height = 80;
     }

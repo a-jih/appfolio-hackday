@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import '../css/property.css';
 
 import House  from './House';
 import UnitList from '../stores/UnitList';
 import UnitStore from '../stores/UnitStore';
-
-import '../css/property.css';
 
 export default class Property extends Component {
   constructor(props) {
