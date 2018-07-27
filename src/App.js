@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import './css/app.css';
 import {Popover, PopoverHeader, PopoverBody, Button} from 'reactstrap';
-import Character from './character.js';
-import Counter from './counter.js';
+import Character from './character';
+import Counter from './counter';
 import Menu from './component/Menu'
 
-class App extends Component {
+import Property from './component/Property';
+import UnitStore from './stores/UnitStore';
+import UnitList from './stores/UnitList';
+
+export default class App extends Component {
   constructor(props) {
     super(props);
 
@@ -30,7 +34,8 @@ class App extends Component {
       showMenu: false,
       dogHousePurchaseDisabled: true,
       housePurchaseDisabled: true,
-      apartmentPurchaseDisabled: true
+      apartmentPurchaseDisabled: true,
+      unitList: new UnitList()
     }
 
     this.handleToggleGame = this.handleToggleGame.bind(this);
@@ -40,42 +45,47 @@ class App extends Component {
     this.createDogHouse = this.createDogHouse.bind(this);
     this.createHouse = this.createHouse.bind(this);
     this.createApartment = this.createApartment.bind(this);
+    this.addCoinCount = this.addCoinCount.bind(this);
   }
 
   handleCoinClick(e) {
-    let incrementedCoin = this.state.coins + 1;
-    this.setState({
-      coins: incrementedCoin,
-      dogHousePurchaseDisabled: incrementedCoin < this.houseList[0].price,
-      housePurchaseDisabled: incrementedCoin < this.houseList[1].price,
-      apartmentPurchaseDisabled: incrementedCoin < this.houseList[2].price
-    });
+    this.addCoinCount(1);
   }
 
   subtractCoinCount(amount){
     let decrementedCoin = this.state.coins - amount;
+    this.updateCoinState(decrementedCoin);
+  }
+
+  addCoinCount(amount){
+    let addedCoin = this.state.coins + amount;
+    this.updateCoinState(addedCoin);
+  }
+
+  updateCoinState(amount) {
     this.setState({
-      coins: decrementedCoin,
-      dogHousePurchaseDisabled: decrementedCoin < this.houseList[0].price,
-      housePurchaseDisabled: decrementedCoin < this.houseList[1].price,
-      apartmentPurchaseDisabled: decrementedCoin < this.houseList[2].price
+      coins: amount,
+      dogHousePurchaseDisabled: amount < this.houseList[0].price,
+      housePurchaseDisabled: amount < this.houseList[1].price,
+      apartmentPurchaseDisabled: amount < this.houseList[2].price
     });
   }
 
   // put logic in following three methods to create house on bottom of page
-  createDogHouse(e){
-
+  createDogHouse() {
+    this.state.unitList.append(new UnitStore('Dog House'));
+    // console.log(this.state.unitList.state.unitList.length);
   }
 
-  createHouse(e){
-
+  createHouse() {
+    this.state.unitList.append(new UnitStore('House'));
   }
 
-  createApartment(e){
-
+  createApartment() {
+    this.state.unitList.append(new UnitStore('Apartment'));
   }
 
-  handleToggleGame(e) {
+  handleToggleGame = () => {
     const showGame = !this.state.showGame;
     this.setState({showGame});
   }
@@ -112,6 +122,7 @@ class App extends Component {
               </Button>
               <Counter coins={this.state.coins} />
               <Character onClick={this.handleCoinClick} />
+              <Property unitList={this.state.unitList} addCoin={this.addCoinCount}/>
             </div>
           </div>
         }
@@ -122,5 +133,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;

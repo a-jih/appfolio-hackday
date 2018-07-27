@@ -3,17 +3,17 @@ import {Button} from 'reactstrap';
 import '../css/Menu.css'
 
 class Menu extends Component {
-  handleCreateDogHouseClick(e){
+  handleCreateDogHouseClick = () => {
     this.props.subtractCoinCount(this.props.houseList[0].price);
     this.props.createDogHouse();
   }
 
-  handleCreateHouseClick(e){
+  handleCreateHouseClick = () => {
     this.props.subtractCoinCount(this.props.houseList[1].price);
     this.props.createHouse();
   }
 
-  handleCreateApartmentClick(e){
+  handleCreateApartmentClick = () => {
     this.props.subtractCoinCount(this.props.houseList[2].price);
     this.props.createApartment();
   }
@@ -92,7 +92,7 @@ class Menu extends Component {
 
   render() {
     return (
-      <div className = "menu">
+      <div className="menu">
           { this.renderHousingOptions() }
       </div>
     )
