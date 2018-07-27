@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './css/app.css';
+import {Popover, PopoverHeader, PopoverBody, Button} from 'reactstrap';
 import Character from './character.js';
 import Counter from './counter.js';
 import Menu from './component/Menu'
@@ -26,11 +27,14 @@ class App extends Component {
     this.state = {
       coins: 0,
       showGame: false,
+      showMenu: false,
       dogHousePurchaseDisabled: true,
       housePurchaseDisabled: true,
       apartmentPurchaseDisabled: true
     }
+
     this.handleToggleGame = this.handleToggleGame.bind(this);
+    this.handleToggleMenu = this.handleToggleMenu.bind(this);
     this.handleCoinClick = this.handleCoinClick.bind(this);
     this.subtractCoinCount = this.subtractCoinCount.bind(this);
     this.createDogHouse = this.createDogHouse.bind(this);
@@ -76,22 +80,36 @@ class App extends Component {
     this.setState({showGame});
   }
 
+  handleToggleMenu(e) {
+    this.setState({
+      showMenu: !this.state.showMenu
+    });
+  }
+
   render() {
     return (
       <div id="app" className="app">
         {this.state.showGame &&
           <div id="game" className="game">
             <div id="controls">
-              <Menu
-                houseList = {this.houseList}
-                dogHousePurchaseDisabled = {this.state.dogHousePurchaseDisabled}
-                housePurchaseDisabled = {this.state.housePurchaseDisabled}
-                apartmentPurchaseDisabled = {this.state.apartmentPurchaseDisabled}
-                createDogHouse={e => this.createDogHouse(e)}
-                createHouse={e => this.createHouse(e)}
-                createApartment={e => this.createApartment(e)}
-                subtractCoinCount={this.subtractCoinCount}
-              />
+              <Popover id="popover" placement="top" isOpen={this.state.showMenu} target="MenuPopup" toggle={this.handleToggleMenu}>
+                <PopoverHeader>Purchase Options</PopoverHeader>
+                <PopoverBody>
+                <Menu
+                  houseList = {this.houseList}
+                  dogHousePurchaseDisabled = {this.state.dogHousePurchaseDisabled}
+                  housePurchaseDisabled = {this.state.housePurchaseDisabled}
+                  apartmentPurchaseDisabled = {this.state.apartmentPurchaseDisabled}
+                  createDogHouse={e => this.createDogHouse(e)}
+                  createHouse={e => this.createHouse(e)}
+                  createApartment={e => this.createApartment(e)}
+                  subtractCoinCount={this.subtractCoinCount}
+                />
+                </PopoverBody>
+               </Popover>
+              <Button color="info" id="MenuPopup" onClick={this.handleToggleMenu}>
+                {this.state.showMenu ? 'Hide' : 'Splurge'}
+              </Button>
               <Counter coins={this.state.coins} />
               <Character onClick={this.handleCoinClick} />
             </div>
