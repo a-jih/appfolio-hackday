@@ -4,31 +4,20 @@ import '../css/property.css';
 
 import House  from './House';
 import UnitList from '../stores/UnitList';
-import UnitStore from '../stores/UnitStore';
+
 
 export default class Property extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      houses: [new UnitStore(), new UnitStore()]
-    };
-  }
-
   static propTypes = {
     unitList: PropTypes.instanceOf(UnitList),
     addCoin: PropTypes.func
   }
 
-  componentDidMount() {
-    this.setState({ houses: this.props.unitList.unitList });
-  }
-
   render() {
     return (
       <div className="property">
-        {this.state.houses.map((d, i) =>
+        {this.props.unitList.unitList.map((d, i) =>
           <House
+            className="house"
             store={d}
             id={i}
             addCoin={this.props.addCoin}

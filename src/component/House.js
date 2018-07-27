@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Draggable from 'react-draggable';
 
 import UnitStore from '../stores/UnitStore';
 
@@ -18,24 +19,31 @@ export default class House extends Component {
     id: PropTypes.number
   }
 
-  handleClick() {
+  handleClick(e) {
+    e.preventDefault();
     this.props.addCoin(this.props.store.price);
     this.props.delHouse(this.props.id);
   }
 
   render () {
     return (
-      <div id={this.props.id}>
-        <img
+      <Draggable
+        axis="x"
+        defaultPosition={{x: -this.props.store.position, y: 0}}
+        onStart={this.handleStart}
+        onDrag={this.handleDrag}
+        onStop={this.handleStop}
+      >
+        <svg
+          id={this.props.id}
           className="house"
-          onClick={this.handleClick}
-          src={this.props.store.photoUrl}
-          style={{right: `${this.props.store.position}%`}}
-          alt='wrong url'
+          onContextMenu={this.handleClick}
           width={this.props.store.width}
           height={this.props.store.height}
-        />
-      </div>
+        >
+          <image xlinkHref={this.props.store.photoUrl} width={this.props.store.width} height={this.props.store.height} />
+        </svg>
+      </Draggable>
     );
   }
 }

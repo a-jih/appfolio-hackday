@@ -7,7 +7,7 @@ export default class UnitStore {
   width = 0;
   height = 0;
 
-  constructor(type, position) {
+  constructor(type) {
     if (type === 'Dog House') {
       this.price = 1;
       this.width = this.height = 30;
@@ -20,6 +20,6 @@ export default class UnitStore {
       this.photoUrl = '/assets/apartment.svg';
       this.width = this.height = 80;
     }
-    this.position = position;
+    this.position = Math.floor(Math.random() * 60 + 10)/100 * window.innerWidth;
   }
 }

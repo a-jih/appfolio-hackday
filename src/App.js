@@ -73,18 +73,15 @@ export default class App extends Component {
 
   // put logic in following three methods to create house on bottom of page
   createDogHouse() {
-    let position = Math.floor(Math.random() * 60 + 10);
-    this.state.unitList.append(new UnitStore('Dog House', position));
+    this.state.unitList.append(new UnitStore('Dog House'));
   }
 
   createHouse() {
-    let position = Math.floor(Math.random() * 60 + 10);
-    this.state.unitList.append(new UnitStore('House', position));
+    this.state.unitList.append(new UnitStore('House'));
   }
 
   createApartment() {
-    let position = Math.floor(Math.random() * 60 + 10);
-    this.state.unitList.append(new UnitStore('Apartment', position));
+    this.state.unitList.append(new UnitStore('Apartment'));
   }
 
   handleToggleGame = () => {
@@ -126,7 +123,6 @@ export default class App extends Component {
               <Character onClick={this.handleCoinClick} />
               <Property unitList={this.state.unitList} addCoin={this.addCoinCount}/>
             </div>
-            <Property unitList={this.state.unitList} addCoin={this.addCoinCount}/>
           </div>
         }
         <button className="btn" onClick={this.handleToggleGame}>
