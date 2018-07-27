@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Card, CardBody, CardTitle, Button} from 'reactstrap';
+import {Button} from 'reactstrap';
 import '../css/Menu.css'
 
 class Menu extends Component {
@@ -23,7 +23,7 @@ class Menu extends Component {
       <table>
         <tbody>
         <tr>
-          <th><img width="60" height="60" src={'../../assets/doghouse.svg'} /> </th>
+          <th><img width="60" height="60" src={'../../assets/doghouse.svg'} alt="Dog House" /> </th>
           <th>
             <table>
               <tbody>
@@ -44,7 +44,7 @@ class Menu extends Component {
           </th>
         </tr>
         <tr>
-          <th><img width="60" height="50" src={'../../assets/house.svg'} /></th>
+          <th><img width="60" height="50" src={'../../assets/house.svg'} alt="House" /></th>
           <th>
             <table>
               <tbody>
@@ -65,7 +65,7 @@ class Menu extends Component {
           </th>
         </tr>
         <tr>
-          <th><img width="60" height="55" src={'../../assets/apartment.svg'} /></th>
+          <th><img width="60" height="55" src={'../../assets/apartment.svg'} alt="Apartment" /></th>
           <th>
             <table>
               <tbody>
